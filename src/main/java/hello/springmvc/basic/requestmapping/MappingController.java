@@ -97,4 +97,9 @@ public class MappingController {
         return "ok7";
     }
 
+    @PostMapping(value = "/test/{test}" )
+    public String mappingProducesTest(@PathVariable("test") String test) {
+        log.info("test >> {}" , test);
+        return "ok8";
+    }
 }
